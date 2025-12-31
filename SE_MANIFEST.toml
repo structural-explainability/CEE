@@ -1,0 +1,59 @@
+schema = "se-manifest-1"
+
+[repo]
+name = "CEE"
+org  = "structural-explainability"
+kind = "formalization"
+status = "reference"
+since = "2025"
+summary = "Lean formalization of Context Evidence and Explanations (CEE)."
+
+[layer]
+space = "SE"
+role  = "formal-identity"
+
+[depends]
+required = [
+  "structural-explainability/spec-se@v1",
+  "structural-explainability/spec-ae@v1",
+  "structural-explainability/spec-ep@v1",
+  "structural-explainability/spec-cee@v1"
+]
+optional = []
+
+[provides]
+artifacts = [
+  "ANNOTATIONS.md",
+  "CITATION.cff",
+  "README.md",
+  "SE_MANIFEST.toml"
+]
+
+[scope]
+includes = [
+  "structural forms for contextual evidence and explanation attachments",
+  "context tags and scoping references (as metadata about interpretive acts)",
+  "explanation objects and evidence groupings (structure only)",
+  "attestation and provenance references as accountable claims (not world facts)",
+  "linkage mechanisms from EP substrate records to external interpretive artifacts",
+  "proof scaffolding for CEE conformance"
+]
+excludes = [
+  "changes to AE identity regimes or kind definitions",
+  "changes to EP structural evolution semantics",
+  "assertions of truth, validity, or evidentiary sufficiency",
+  "causal mechanisms, production relations, or explanatory closure",
+  "normative judgments (obligation, permission, enforcement, evaluation)",
+  "domain semantics beyond structural shapes",
+  "centralized ontology requirements or forced consensus/normalization",
+  "implementation code generation"
+]
+
+
+[citation]
+cff = "CITATION.cff"
+preferred = "repo"
+bib_hint = "case2025-lean-cee"
+
+[traceability]
+identifier_map = "CEE/Spec/IdentifierMap.lean"
