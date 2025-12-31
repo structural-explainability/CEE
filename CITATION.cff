@@ -1,7 +1,7 @@
 cff-version: "1.2.0"
 type: software
 
-title: "Structural Explainability: Contextual Evidence and Explanations (CEE)"
+title: "Structural Explainability: Contextual Evidence and Explanations (CEE) Formalization"
 version: "0.1.0"
 date-released: "2025-12-31"
 
@@ -19,10 +19,9 @@ keywords:
   - semantic-interoperability
   - contextual-evidence
   - provenance
-  - dependency-graphs
-  - identity-regimes
-  - formal-ontology
+  - formal-specification
   - formal-verification
+  - proof-carrying
   - theorem-proving
   - lean4
 

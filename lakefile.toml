@@ -27,12 +27,11 @@ keywords = [
   "structural-explainability",
   "accountability",
   "semantic-interoperability",
-  "exchange-protocol",
+  "contextual-evidence",
   "provenance",
-  "dependency-graphs",
-  "identity-regimes",
-  "formal-ontology",
+  "formal-specification",
   "formal-verification",
+  "proof-carrying",
   "theorem-proving",
   "lean4"
 ]
