@@ -10,7 +10,7 @@ summary = "Lean formalization of Context Evidence and Explanations (CEE)."
 
 [layer]
 space = "SE"
-role  = "formal-identity"
+role  = "formal-interpretive-interface"
 
 [depends]
 required = [
