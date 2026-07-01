@@ -38,7 +38,7 @@ jobs:
 
       - name: A1) Checkout repository code
         # WHY: Needed to access files for checks.
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: A2) Run pre-commit (all files)
         # WHY: Single source of truth for locally runnable quality gates.
@@ -65,5 +65,5 @@ jobs:
       # BUILD: Get code and build Lean project
       # ============================================================
 
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: leanprover/lean-action@v1
