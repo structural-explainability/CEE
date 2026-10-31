@@ -38,13 +38,13 @@ jobs:
 
       - name: A1) Checkout repository code
         # WHY: Needed to access files for checks.
-        uses: actions/checkout@v6
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       # - name: A2) Run pre-commit (all files)
       #   # WHY: Single source of truth for locally runnable quality gates.
       #   # OBS: Fails if hooks would modify files; does not commit changes.
       #   id: precommit # WHY: Identify step for conditional follow-up. # WHY: Identify step for conditional follow-up.
-      #   uses: pre-commit/action@v3.0.1
+      #   uses: pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd # v3.0.1
       #   with:
       #     extra_args: --all-files
 
@@ -65,5 +65,5 @@ jobs:
       # BUILD: Get code and build Lean project
       # ============================================================
 
-      - uses: actions/checkout@v6
-      - uses: leanprover/lean-action@v1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64 # v1
