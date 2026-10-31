@@ -6,7 +6,7 @@
 # CUSTOM: Update file-type rules only when introducing new languages or artifact types.
 
 # WHY: Auto-detect text files and normalize line endings to avoid cross-platform drift.
-* text=auto
+* text=auto eol=lf
 
 
 # === Source Code ===

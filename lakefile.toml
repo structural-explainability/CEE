@@ -1,28 +1,17 @@
-# REQ.FILE.PROJECT.IDENTITY
-#   Declares the externally visible identity and build surface of this package.
-#   Sections marked CUSTOM are expected to vary by repository.
+# ============================================================
+# lakefile.toml
+# ============================================================
+# Declares the public Lean package identity, import surface,
+# build targets, dependencies, and verification executables.
 
 # ============================================================
-# REQUIRED PROJECT IDENTITY (stable structure, custom values)
+# PROJECT IDENTITY
 # ============================================================
 
-# REQ.PROJECT.NAME
-#   Canonical package name.
-#   CUSTOM: Must match repository naming.
 name = "CEE"
-
-# REQ.PROJECT.VERSION
-#   Semantic version.
-#   Increment only for externally visible logical changes.
 version = "0.1.0"
-
-# REQ.PROJECT.LICENSE
-#   Open license permitting reuse of formal artifacts.
 license = "MIT"
 
-# REQ.PROJECT.KEYWORDS
-#   Discovery metadata for Lean, GitHub, and academic indexing.
-#   CUSTOM: Adjust to reflect repository scope.
 keywords = [
   "structural-explainability",
   "accountability",
@@ -37,31 +26,26 @@ keywords = [
 ]
 
 # ============================================================
-# Build configuration
+# BUILD SURFACE
 # ============================================================
+# defaultTargets must include the public Lean library root.
 
-# REQ.BUILD.DEFAULT_TARGETS:
-#   Default build surface for lake build command.
-#   MUST include the public library root.
 defaultTargets = ["CEE"]
 
 # ============================================================
-# Libraries provided by this package
+# PUBLIC LIBRARY
 # ============================================================
+# Downstream Lean projects import this library root.
+# Lake discovers modules under the matching source directory.
 
-# REQ.LIB.PUBLIC:
-#   Public Lean library exported by this package.
-#   Downstream users import this namespace directly.
 [[lean_lib]]
 name = "CEE"
 
 # ============================================================
-# Executables
+# EXECUTABLES
 # ============================================================
+# Export executables generate machine-readable contract artifacts.
 
-# REQ.EXE.VERIFICATION:
-#   Minimal executable used for CI sanity checks and
-#   proof compilation validation.
 [[lean_exe]]
 name = "verify"
 root = "Main"
